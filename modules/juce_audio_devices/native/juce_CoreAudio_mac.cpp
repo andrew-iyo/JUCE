@@ -795,7 +795,7 @@ public:
             const auto nanos = timeStamp != nullptr ? timeConversions.hostTimeToNanos (timeStamp->mHostTime) : 0;
             const AudioIODeviceCallbackContext context
             {
-                timeStamp != nullptr ? &nanos : nullptr,
+                nullptr,
             };
 
             callback->audioDeviceIOCallbackWithContext (getTempBuffers (inStream),  numInputChans,
