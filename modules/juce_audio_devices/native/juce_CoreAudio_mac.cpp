@@ -790,8 +790,6 @@ public:
                 if (stream != nullptr)
                     owner.hadDiscontinuity |= stream->checkTimestampsForDiscontinuity (stream == inStream.get() ? inputTimestamp
                                                                                                                 : outputTimestamp);
-
-            const auto* timeStamp = numOutputChans > 0 ? outputTimestamp : inputTimestamp;
             const AudioIODeviceCallbackContext context
             {
                 nullptr,
